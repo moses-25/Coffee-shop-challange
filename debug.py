@@ -3,7 +3,7 @@ from coffee import Coffee
 from order import Order
 
 # --- Create Customers ---
-alice = Customer("Alice")
+alex = Customer("Alex")
 bob = Customer("Bob")
 
 # --- Create Coffees ---
@@ -11,14 +11,14 @@ latte = Coffee("Latte")
 espresso = Coffee("Espresso")
 
 # --- Create Orders ---
-order1 = alice.create_order(latte, 3.5)
-order2 = alice.create_order(espresso, 4.0)
+order1 = alex.create_order(latte, 3.5)
+order2 = alex.create_order(espresso, 4.0)
 order3 = bob.create_order(latte, 5.0)
 
 # --- Check Relationships ---
 print("\n--- Customer Orders ---")
-print([o.price for o in alice.orders()])  # Fixed: Changed alice.orders() to alice.orders
-print([c.name for c in alice.coffees()])  # Fixed: Changed alice.coffees() to alice.coffees
+print([o.price for o in alex.orders()])  # Fixed: Changed alice.orders() to alice.orders
+print([c.name for c in alex.coffees()])  # Fixed: Changed alice.coffees() to alice.coffees
 
 print("\n--- Coffee Orders ---")
 print([o.price for o in latte.orders()])  # Fixed: Changed latte.orders() to latte.orders
@@ -50,6 +50,6 @@ except ValueError as e:
     print(e)
 
 try:
-    bad_order = Order(alice, latte, 20.0)  # Invalid price
+    bad_order = Order(alex, latte, 20.0)  # Invalid price
 except ValueError as e:
     print(e)
