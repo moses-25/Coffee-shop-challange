@@ -17,12 +17,12 @@ order3 = joseph.create_order(latte, 5.0)
 
 # this Checks Relationships
 print("\n--- Customer Orders ---")
-print([o.price for o in alice.orders()])  
-print([c.name for c in alice.coffees()])
+print([o.price for o in moses.orders()])  
+print([c.name for c in moses.coffees()])
 
 print("\n--- Coffee Orders ---")
 print([o.price for o in latte.orders()])  # Should show [3.5, 5.0]
-print([c.name for c in latte.customers()])  # Should show ['Alice', 'Bob']
+print([c.name for c in latte.customers()])  # Should show ['moses', 'joseph']
 
 print("\n--- Coffee Aggregates ---")
 print(latte.num_orders())  # Should show 2
