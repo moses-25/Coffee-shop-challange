@@ -20,6 +20,17 @@ class TestCoffee(unittest.TestCase):
         with self.assertRaises(AttributeError):
             coffee.name = "Mocha"
 
+    def test_minimum_price(self):
+    customer = Customer("Leo")
+    coffee = Coffee("Americano")
+    order = Order(customer, coffee, 1.0)
+    self.assertEqual(order.price, 1.0)
+
+    def test_no_orders(self):
+    coffee = Coffee("Macchiato")
+    self.assertEqual(coffee.num_orders(), 0)
+    self.assertEqual(coffee.average_price(), 0)
+
     def test_orders_and_customers(self):
         coffee = Coffee("Espresso")
         c1 = Customer("Tom")
