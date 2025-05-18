@@ -6,7 +6,7 @@ if TYPE_CHECKING:
     from coffee import Coffee
 
 class Coffee:
-    def __init__(self, name):
+    def __init__(self, name,):
         if isinstance(name, str) and len(name) >= 3:
             self._name = name
         else:
