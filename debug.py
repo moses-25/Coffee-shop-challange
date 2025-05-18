@@ -11,11 +11,11 @@ latte = Coffee("Latte")
 espresso = Coffee("Espresso")
 
 # this Create Orders
-order1 = alice.create_order(latte, 3.5)
-order2 = alice.create_order(espresso, 4.0)
-order3 = bob.create_order(latte, 5.0)
+order1 = moses.create_order(latte, 3.5)
+order2 = moses.create_order(espresso, 4.0)
+order3 = joseph.create_order(latte, 5.0)
 
-# this Check Relationships
+# this Checks Relationships
 print("\n--- Customer Orders ---")
 print([o.price for o in alice.orders()])  
 print([c.name for c in alice.coffees()])
