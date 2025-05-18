@@ -22,6 +22,7 @@ class Coffee:
         return self._name
 
     def orders(self):
+        from order import Order
         return [order for order in Order.all if order.coffee == self]
 
     def customers(self):
