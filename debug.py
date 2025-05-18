@@ -3,8 +3,8 @@ from coffee import Coffee
 from order import Order
 
 # this Create Customers 
-alice = Customer("Alice")
-bob = Customer("Bob")
+moses = Customer("Moses")
+joseph = Customer("Joseph")
 
 # this Create Coffees 
 latte = Coffee("Latte")
