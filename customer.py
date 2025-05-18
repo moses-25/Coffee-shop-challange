@@ -13,7 +13,7 @@ class Customer:
         else:
             raise ValueError("Name must be a string between 1 and 15 characters.")
 
-   # def orders(self):
+    def orders(self):
         return [order for order in Order.all if order.customer == self]
 
    # def coffees(self):
