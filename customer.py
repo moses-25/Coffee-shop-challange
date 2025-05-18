@@ -2,6 +2,12 @@ class Customer:
     def __init__(self, name):
         self.name = name
 
+    def __hash__(self):
+        return hash(self.name)
+
+    def __eq__(self, other):
+        return isinstance(other, Customer) and self.name == other.name
+
     @property
     def name(self):
         return self._name
