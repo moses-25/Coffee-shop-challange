@@ -22,7 +22,7 @@ class Customer:
     def create_order(self, coffee, price):
         return Order(self, coffee, price)
 
-   # @classmethod
+    @classmethod
     #def most_aficionado(cls, coffee):
         customer_totals = {}
         for order in Order.all:
