@@ -17,12 +17,12 @@ order3 = bob.create_order(latte, 5.0)
 
 # --- Check Relationships ---
 print("\n--- Customer Orders ---")
-print([o.price for o in alice.orders()])  # Should show [3.5, 4.0]
-print([c.name for c in alice.coffees()])  # Should show ['Latte', 'Espresso']
+print([o.price for o in alice.orders])  # Should show [3.5, 4.0]
+print([c.name for c in alice.coffees])  # Should show ['Latte', 'Espresso']
 
 print("\n--- Coffee Orders ---")
-print([o.price for o in latte.orders()])  # Should show [3.5, 5.0]
-print([c.name for c in latte.customers()])  # Should show ['Alice', 'Bob']
+print([o.price for o in latte.orders])  # Should show [3.5, 5.0]
+print([c.name for c in latte.customers])  # Should show ['Alice', 'Bob']
 
 print("\n--- Coffee Aggregates ---")
 print(latte.num_orders())  # Should show 2
@@ -48,4 +48,3 @@ try:
     bad_order = Order(alice, latte, 20.0)  # Invalid price
 except ValueError as e:
     print(e)
-    
