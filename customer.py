@@ -23,7 +23,7 @@ class Customer:
         return Order(self, coffee, price)
 
     @classmethod
-    #def most_aficionado(cls, coffee):
+    def most_aficionado(cls, coffee):
         customer_totals = {}
         for order in Order.all:
             if order.coffee == coffee:
