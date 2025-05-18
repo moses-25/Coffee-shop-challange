@@ -1,3 +1,10 @@
+from __future__ import annotations
+from typing import TYPE_CHECKING
+
+if TYPE_CHECKING:
+    from customer import Customer
+    from coffee import Coffee
+
 class Coffee:
     def __init__(self, name):
         if isinstance(name, str) and len(name) >= 3:
