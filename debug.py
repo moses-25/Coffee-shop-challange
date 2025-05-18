@@ -28,6 +28,11 @@ print("\n--- Coffee Aggregates ---")
 print(latte.num_orders())  # Should show 2
 print(latte.average_price())  # Should show 4.25
 
+if latte.num_orders() > 0:
+    print(latte.average_price())
+else:
+    print("No orders for Latte.")
+
 print("\n--- Aficionado Check ---")
 aficionado = Customer.most_aficionado(latte)
 print(aficionado.name if aficionado else "No aficionado")  # Should show Bob
