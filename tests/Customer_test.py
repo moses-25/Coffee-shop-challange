@@ -1,4 +1,8 @@
 import unittest
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 from customer import Customer
 from coffee import Coffee
 from order import Order
