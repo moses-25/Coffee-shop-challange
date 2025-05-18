@@ -2,20 +2,6 @@
 
 A Python-based project that models a coffee shop system, including customers, coffee types, and orders. This project demonstrates object-oriented programming concepts, relationships between entities, and basic error handling.
 
----
-
-## Table of Contents
-- [Overview](#overview)
-- [Features](#features)
-- [Project Structure](#project-structure)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Testing](#testing)
-- [Contributing](#contributing)
-- [License](#license)
-
----
-
 ## Overview
 
 The Coffee Shop Challenge is a simulation of a coffee shop system where:
@@ -41,3 +27,14 @@ This project is designed to showcase object-oriented programming principles such
 ---
 
 ## Project Structure
+coffee-shop-challenge/
+  ├── Pipfile # Dependency management
+  ├── debug.py # Demo script
+  ├── customer.py # Customer class
+  ├── coffee.py # Coffee class
+  ├── order.py # Order class
+└── tests/
+        ├── init.py
+        ├── customer_test.py # Customer unit tests
+        ├── coffee_test.py # Coffee unit tests
+        └── order_test.py # Order unit tests
