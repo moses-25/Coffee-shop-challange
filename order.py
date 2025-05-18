@@ -1,10 +1,14 @@
-from customer import Customer
-from coffee import Coffee
+from __future__ import annotations
+from typing import TYPE_CHECKING
+
+if TYPE_CHECKING:
+    from customer import Customer
+    from coffee import Coffee
 
 class Order:
     all = []
 
-    def __init__(self, customer, coffee, price):
+    def __init__(self, customer: customer, coffee: coffee, price: float):
         if not isinstance(customer, Customer):
             raise TypeError("Customer must be an instance of Customer.")
         if not isinstance(coffee, Coffee):
@@ -18,13 +22,13 @@ class Order:
         Order.all.append(self)
 
     @property
-    def customer(self):
+    def customer(self) -> Customer:
         return self._customer
 
     @property
-    def coffee(self):
+    def coffee(self) -> Coffee:
         return self._coffee
 
     @property
-    def price(self):
+    def price(self) -> float:
         return self._price
