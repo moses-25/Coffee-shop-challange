@@ -9,9 +9,10 @@ class Order:
     all = []
 
     def __init__(self, customer: customer, coffee: coffee, price: float):
-        if not isinstance(customer, Customer):
+
+        if customer.__class__.__name__ != "Customer":
             raise TypeError("Customer must be an instance of Customer.")
-        if not isinstance(coffee, Coffee):
+        if coffee.__class__.__name__ != "Coffee":
             raise TypeError("Coffee must be an instance of Coffee.")
         if not isinstance(price, float) or not (1.0 <= price <= 10.0):
             raise ValueError("Price must be a float between 1.0 and 10.0.")
