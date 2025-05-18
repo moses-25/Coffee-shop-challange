@@ -6,6 +6,11 @@ if TYPE_CHECKING:
     from coffee import Coffee
 
 class Coffee:
+    def __setattr__(self, name, value):
+        if name == "_name" and hasattr(self, "_name"):
+            raise AttributeError("Cannot modify the name of a Coffee.")
+        super().__setattr__(name, value)
+        
     def __init__(self, name,):
         if isinstance(name, str) and len(name) >= 3:
             self._name = name
