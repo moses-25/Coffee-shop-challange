@@ -30,7 +30,7 @@ print(latte.average_price())  # Should show 4.25
 
 print("\n--- Aficionado Check ---")
 aficionado = Customer.most_aficionado(latte)
-print(aficionado.name if aficionado else "No aficionado")  # Should show Bob
+print(aficionado.name if aficionado else "No aficionado")  # Should show 'moses'
 
 # --- Error Handling Examples ---
 print("\n--- Error Handling ---")
@@ -45,6 +45,6 @@ except ValueError as e:
     print(e)
 
 try:
-    bad_order = Order(alice, latte, 20.0)  # Invalid price
+    bad_order = Order(moses, latte, 20.0)  # Invalid price
 except ValueError as e:
     print(e)
