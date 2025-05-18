@@ -2,23 +2,23 @@ from customer import Customer
 from coffee import Coffee
 from order import Order
 
-# --- Create Customers ---
+# this Create Customers 
 alice = Customer("Alice")
 bob = Customer("Bob")
 
-# --- Create Coffees ---
+# this Create Coffees 
 latte = Coffee("Latte")
 espresso = Coffee("Espresso")
 
-# --- Create Orders ---
+# this Create Orders
 order1 = alice.create_order(latte, 3.5)
 order2 = alice.create_order(espresso, 4.0)
 order3 = bob.create_order(latte, 5.0)
 
-# --- Check Relationships ---
+# this Check Relationships
 print("\n--- Customer Orders ---")
-print([o.price for o in alice.orders()])  # Should show [3.5, 4.0]
-print([c.name for c in alice.coffees()])  # Should show ['Latte', 'Espresso']
+print([o.price for o in alice.orders()])  
+print([c.name for c in alice.coffees()])
 
 print("\n--- Coffee Orders ---")
 print([o.price for o in latte.orders()])  # Should show [3.5, 5.0]
