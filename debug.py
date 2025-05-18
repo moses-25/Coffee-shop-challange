@@ -4,7 +4,7 @@ from order import Order
 
 # --- Create Customers ---
 alex = Customer("Alex")
-bob = Customer("Bob")
+brian = Customer("Brian")
 
 # --- Create Coffees ---
 latte = Coffee("Latte")
@@ -13,7 +13,7 @@ espresso = Coffee("Espresso")
 # --- Create Orders ---
 order1 = alex.create_order(latte, 3.5)
 order2 = alex.create_order(espresso, 4.0)
-order3 = bob.create_order(latte, 5.0)
+order3 = brian.create_order(latte, 5.0)
 
 # --- Check Relationships ---
 print("\n--- Customer Orders ---")
