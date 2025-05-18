@@ -6,7 +6,7 @@ class Coffee:
             raise ValueError("Name must be a string with at least 3 characters.")
 
     @property
-  #  def name(self):
+    def name(self):
         return self._name
 
   #  def orders(self):
