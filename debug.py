@@ -17,12 +17,12 @@ order3 = bob.create_order(latte, 5.0)
 
 # --- Check Relationships ---
 print("\n--- Customer Orders ---")
-print([o.price for o in alice.orders])  # Fixed: Changed alice.orders() to alice.orders
-print([c.name for c in alice.coffees])  # Fixed: Changed alice.coffees() to alice.coffees
+print([o.price for o in alice.orders()])  # Fixed: Changed alice.orders() to alice.orders
+print([c.name for c in alice.coffees()])  # Fixed: Changed alice.coffees() to alice.coffees
 
 print("\n--- Coffee Orders ---")
-print([o.price for o in latte.orders])  # Fixed: Changed latte.orders() to latte.orders
-print([c.name for c in latte.customers])  # Fixed: Changed latte.customers() to latte.customers
+print([o.price for o in latte.orders()])  # Fixed: Changed latte.orders() to latte.orders
+print([c.name for c in latte.customers()])  # Fixed: Changed latte.customers() to latte.customers
 
 print("\n--- Coffee Aggregates ---")
 print(latte.num_orders())  # Should show 2
