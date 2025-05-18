@@ -24,6 +24,17 @@ class TestCustomer(unittest.TestCase):
         c.name = "Max"
         self.assertEqual(c.name, "Max")
 
+    def test_minimum_price(self):
+    customer = Customer("Leo")
+    coffee = Coffee("Americano")
+    order = Order(customer, coffee, 1.0)
+    self.assertEqual(order.price, 1.0)
+
+    def test_no_orders(self):
+    coffee = Coffee("Macchiato")
+    self.assertEqual(coffee.num_orders(), 0)
+    self.assertEqual(coffee.average_price(), 0)
+
     def test_set_name_invalid(self):
         c = Customer("Sam")
         with self.assertRaises(ValueError):
