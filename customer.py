@@ -16,7 +16,7 @@ class Customer:
     def orders(self):
         return [order for order in Order.all if order.customer == self]
 
-   # def coffees(self):
+    def coffees(self):
         return list({order.coffee for order in self.orders()})
 
     #def create_order(self, coffee, price):
